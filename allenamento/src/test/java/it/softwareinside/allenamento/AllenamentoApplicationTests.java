@@ -28,12 +28,17 @@ class AllenamentoApplicationTests {
 
 		assertEquals(Metodi.occorrenzaMaggiore(vettore),"true");
 
+	}
+
+	@Test
+	void testCensura(){
+
 		String[] vettoreStringhe = {"casa", "cane", "mela"};
     	String parola = "cane";
 
-		assertEquals(Metodi.censura(vettoreStringhe, parola)[1], "****");
 		assertEquals(Metodi.censura(vettoreStringhe, parola)[0], "casa");
-
+		assertEquals(Metodi.censura(vettoreStringhe, parola)[1], "****");
+		assertEquals(Metodi.censura(vettoreStringhe, parola)[2], "mela");
 	}
 
 }
